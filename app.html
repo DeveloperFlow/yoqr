@@ -29,7 +29,8 @@
           for(var i = 0; i < params.length; i++){
               var keyValue = params[i].split("=")
               if(keyValue[0] == param && keyValue.length > 0){
-                return keyValue[1]
+                keyValue[0] = ""
+                return keyValue.join("")
               }
           }
       }
@@ -44,7 +45,7 @@
       else{
           appLink = getQueryParam("playstore")
       }
-      alert(appLink) 
+      location.href = appLink
     </script>
 </head>
 <body></body>
