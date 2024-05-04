@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="lib/js/basics.js"></script>
+    <script>
+      /*
+      * returns the os
+      */
+      function getOs(){
+          var ua = navigator.userAgent
+          var osStrings = [
+             {name:"android",regex:/Android/ig},
+             {name:"ios",regex:/(iPhone|iPad|iPod)/ig}
+          ]
+          for(var i = 0; i < osStrings.length; i++){
+              var osDetails = osStrings[i]
+              if(osDetails.regex.test(ua)){
+                  return osDetails.name
+              }
+          }
+      }
+      function getQueryParam(param){
+          var link = location.href
+          var params = link.slice(link.indexOf("?") + 1)
+          params = params.split("&")
+          for(var i = 0; i < params.length; i++){
+              var keyValue = params[i].split("=")
+              if(keyValue[0] == param && keyValue.length > 0){
+                return keyValue[1]
+              }
+          }
+      }
+      var os = getOs()
+      var appLink
+      if(os == "android"){
+          appLink = getQueryParam("playstore")
+      }
+      else if(os == "ios"){
+          appLink = getQueryParam("appstore")
+      }
+      else{
+          appLink = getQueryParam("playstore")
+      }
+      location.href = appLink
+    </script>
+</head>
+<body></body>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create QR code for text, url, vcard, whatsapp contact, email, phone number, sms, wifi and download code in svg or png format">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="lib/css/literal.css">
+    <link rel="stylesheet" href="lib/css/ui.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/create.css">
+    <script defer src="qrcg/src/easy.qrcode.js"></script>
+    <script defer src="lib/js/basics.js"></script>
+    <script defer src="lib/js/ui.js"></script>
+    <script defer src="js/general.js"></script>
+    <script defer src="js/create.js"></script>
+    <title>Create Qr Codes</title>
+</head>
+<body class="my-fonts">
+    <div id="menu" class="minor-pad flex vcenter apart">
+        <h1 class="logo">QR</h1>
+        <button id="menu-ini">&#8801;</button>
+        <div id="ss-curtain"></div>
+        <div class="links minor-pad flex vcenter apart">
+            <div id="ss-close-container">
+                <button id="ss-close">Close</button>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="create.html">Create QR Code</a>
+            <a href="scan.html">Scan Code</a>
+            <a href="faq.html">Faq</a>
+        </div>
+    </div>
+    <div id="main">
+        <div id="qr-types">
+            <div class="qr-type chosen" id="web-type">
+                <button class="flex vcenter minor-pad">
+                    <img class="icon" src="img/web.png"> Website
+                </button>
+            </div>
+            <div class="qr-type" id="text-type">
+                <button class="flex vcenter minor-pad">
+                    <img class="icon" src="img/text.png">
+                      Text
+                </button>
+            </div>
+            <div class="qr-type" id="phone-type">
+                <button class="flex vcenter minor-pad">
+                    <img class="icon" src="img/phone.png">
+                    Phone
+                </button>
+            </div>
+            <div class="qr-type" id="sms-type">
+                <button class="flex vcenter minor-pad">
+                    <img class="icon" src="img/sms.png">
+                    SMS
+                </button>
+            </div>
+            <div class="qr-type" id="whatsapp-type">
+                <button class="flex vcenter minor-pad">
+                <img class="icon" src="img/whatsapp.png">
+                  Whatsapp
+                </button>
+            </div>
+            <div class="qr-type" id="app-type">
+                <button class="flex vcenter minor-pad">
+                  <img class="icon" src="img/app.png">
+                   App
+                </button>
+            </div>
+            <div class="qr-type" id="wifi-type">
+                <button class="flex vcenter minor-pad">
+                <img class="icon" src="img/wifi.png">
+                  Wifi
+            </button>
+            </div>
+            <div class="qr-type" id="email-type">
+                <button class="flex vcenter minor-pad">
+                <img class="icon" src="img/email.png">
+                  Email
+            </button>
+            </div>
+            <div class="qr-type" id="vcard-type">
+                <button class="flex vcenter minor-pad">
+                <img class="icon" src="img/vcard.png">
+                  Vcard
+            </button>
+            </div>
+        </div>
+        <div id="qr-create" class="apart">
+            <div id="qr-params">
+                <div id="fields">
+                    <div id="for-url" class="current-type">
+                      <h2>Website</h2>
+                      <div class="input">
+                        <div>
+                          <span class="small-text">Url</span>
+                        </div>
+                        <input type="url" placeholder="Input Site Url" id="site-url">
+                        <div>
+                          <span class="small-text error" id="url-error"></span>
+                        </div>
+                      </div>
+                   </div>
+                   <div id="for-text" style="display:none">
+                     <h2>Plain Text</h2>
+                      <div class="input">
+                        <div>
+                          <span class="small-text">Text</span>
+                        </div>
+                        <input type="text" placeholder="Input text" id="text-input">
+                        <div>
+                          <span class="small-text error" id="text-error"></span>
+                        </div>
+                      </div>
+                   </div>
+                   <div id="for-phone" style="display:none">
+                     <h2>Phone Number</h2>
+                      <div class="input">
+                        <div>
+                          <span class="small-text">Phone Call</span>
+                        </div>
+                        <input type="phone" placeholder="Input phone number" id="phone-input">
+                        <div>
+                          <span class="small-text error" id="phone-error"></span>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="toggler">
+                    <div class="flex vcenter apart full-width toggle-ini small-text">
+                      <span class="flex vcenter">
+                        <img class="icon" src="img/option.png">
+                        Options
+                      </span>
+                      <span>+</span>
+                    </div>
+                    <div class="subject">
+                        <div>
+                            <div class="big-text">Color</div>
+                            <div class="minor-pad small-text">
+                                <div class="flex vcenter apart colorpicker-container">
+                                  <div class="input">
+                                    <div class="minor-pad">
+                                      <span class="small-text">Background Color</span>
+                                    </div>
+                                    <input type="text" class="minor-pad" id="bg" name="colorLight">
+                                  </div>
+                                  <input type="color" class="colorpicker" name="bg" value="#ffffff">
+                                </div>
+                                <div class="flex vcenter apart colorpicker-container space-up">
+                                  <div class="input">
+                                    <div class="minor-pad">
+                                      <span class="small-text">Dot Color</span>
+                                    </div>
+                                    <input type="text" class="minor-pad" id="dot" name="colorDark">
+                                  </div>
+                                  <input type="color" class="colorpicker" name="dot">
+                                </div>
+                                <div class="flex vcenter apart colorpicker-container space-up">
+                                  <div class="input">
+                                    <div class="minor-pad">
+                                      <span class="small-text">Marker Border Color</span>
+                                    </div>
+                                    <input type="text" class="minor-pad" id="marker-border" name="PO">
+                                  </div>
+                                  <input type="color" class="colorpicker" name="marker-border">
+                                </div>
+                                <div class="flex vcenter apart colorpicker-container space-up">
+                                  <div class="input">
+                                    <div class="minor-pad">
+                                      <span class="small-text">Marker Center Color</span>
+                                    </div>
+                                    <input type="text" class="minor-pad" id="marker-center" name="PI">
+                                  </div>
+                                  <input type="color" class="colorpicker" name="marker-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggler">
+                    <div class="flex vcenter apart full-width toggle-ini small-text">
+                        <span class="flex vcenter">
+                          <img class="icon" src="img/gallery.png">
+                          Logo
+                        </span>
+                        <span>+</span>
+                    </div>
+                    <div class="subject">
+                        <div>
+                          <div class="big-text">Logo</div>
+                          <div class="minor-pad small-text">
+                            <div>
+                               <input type="file" style="display:none" id="real-logo-picker" accept="image/*">
+                               <button id="logo-picker" class="black-bg white">Upload Logo</button>
+                               <div id="logo-preview">
+                                 <div>Or Choose From The Available</div>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="create-container">
+                    <button class="minor-pad" id="create-btn">
+                      Create
+                    </button>
+                 </div>
+            </div>
+            <div id="result-container">
+                <div id="result" class="flex vcenter hcenter space-up">
+                    <img src="img/create.jpeg" id="placeholder-image">
+                </div>
+                <button id="download-btn" disabled>
+                  Download
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="main bit-curved">
+            <div class="links">
+                <h3>Links</h3>
+                <a href="create.html">
+                    Create Qr Code
+                </a>
+                <a href="scan.html">
+                    Scan Qr Code
+                </a>
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="faq.html">
+                    FAQ
+                </a>
+                <a href="report.html">
+                    Report an Error
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
