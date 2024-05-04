@@ -411,11 +411,11 @@ function forApp(){
           error = true
       }
       else{
-          if(!(isWebUrl(pslink))){
+          if(!(isWebUrl(pslink)) && !(isEmpty(pserror))){
               pserror = "Please Input a valid url"
               error = true
           }
-          if(!(isWebUrl(aslink))){
+          if(!(isWebUrl(aslink)) && !(isEmpty(aslink))){
               aserror = "Please input a valid app store link"
               error = true
           }
