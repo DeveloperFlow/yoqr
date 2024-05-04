@@ -30,7 +30,7 @@
               var keyValue = params[i].split("=")
               if(keyValue[0] == param && keyValue.length > 0){
                 keyValue[0] = ""
-                return keyValue.join("")
+                return keyValue.join("=")
               }
           }
       }
