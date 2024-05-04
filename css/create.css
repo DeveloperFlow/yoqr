@@ -1,0 +1,133 @@
+.colorpicker-container .input{
+    width: 80%;
+}
+.colorpicker{
+    width: 15%;
+}
+.toggler .toggle-ini span.flex{
+  width: 80%;
+}
+.toggler .toggle-ini span.flex img{
+  margin-right: 2%;
+}
+
+#qr-types{
+    margin: auto; 
+    max-width: 1000px;
+    padding: 4%;
+    background-color: #fff;
+    font-size: 0px;
+}
+#qr-types .qr-type{
+    display: inline-block;
+    width: 30%;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+#qr-types button{
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    font-size: 12px;
+}
+#qr-types button img{
+    margin-right: 2px;
+}
+#qr-types .qr-type.chosen button{
+    border: 1px solid #000;
+}
+
+#qr-params{
+    max-width: 800px;
+}
+
+#fields{
+    padding: 4%;
+}
+#fields h2{
+  font-weight: normal;
+  margin-top: 0px;
+}
+#fields .input{
+    display: inline-block;
+    width: 100%;
+}
+#fields input,#fields textarea{
+    padding: 3%;
+}
+
+#logo-picker{
+  width: 100%;
+  padding: 3%;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+#logo-preview{
+  padding: 3%;
+  margin-top: 3%;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+#logo-preview button{
+    width: 30%;
+    margin-left: 3%;
+    margin-top: 3%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    box-shadow: inset 2px 2px 10px #000;
+    padding: 5%;
+}
+#logo-preview .chosen{
+    border: 2px solid #000;
+}
+
+#create-container{
+    padding: 4%;
+    text-align: center;
+}
+#create-container button{
+    border: 1px solid #000;
+    background-color: transparent;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#result img{
+    width: 80%;
+    filter: grayscale(100%);
+    border-radius: 8px;
+    max-width: 400px;
+}
+#download-btn{
+    margin: auto;
+    margin-top: 3%;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 4px;
+    display: block;
+    border: 1px solid #000;
+    padding: 3%;
+}
+
+@media only screen and (min-width:800px){
+    #qr-types{
+        margin-top: 3%;
+        border-radius: 8px;
+    }
+    #qr-create{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 3%;
+        max-width: 1000px;
+    }
+    #qr-params{
+        width: 50%;
+    }
+    #result-container{
+        width: 50%;
+    }
+}
