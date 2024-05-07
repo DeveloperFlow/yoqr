@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="lib/css/ui.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/scan.css">
-    <script defer src="qrcs/src/html5-qrcode-scanner.ts"></script>
+    <script defer src="qrcs/qr.js"></script>
     <script defer src="lib/js/basics.js"></script>
     <script defer src="lib/js/ui.js"></script>
     <script defer src="js/general.js"></script>
@@ -33,7 +33,29 @@
         </div>
     </div>
     <div id="main">
-        
+        <div id="from-cam">
+            <h1 class="center-text">Scan With Camera</h1>
+            <h1 class="center-text">
+                <img src="img/camera.png">
+            </h1>
+        </div>
+        <div id="from-img">
+            <h1 class="center-text">Scan Image File</h1>
+            <h1 class="center-text">
+                <img src="img/gallery.png">
+            </h1>
+            <input type="file" accept="image/*" style="display:none" id="choose-img">
+        </div>
+        <div id="cam-scanner" style="display:none" class="full-width full-height fixed left top flex vcenter hcenter">
+            <div id="instruction" class="center-text absolute top left center-text full-width minor-pad">
+                Place the qr code in the frame
+            </div>
+            <div id="reader"></div>
+            <div id="camera-list" class="oneline scrollable-v absolute bottom left full-width">
+                
+            </div>
+        </div>
+        <div id="file-scanner" style="display:none" class="full-width full-height fixed left top"></div>
     </div>
     <div id="footer">
         <div class="main bit-curved">
