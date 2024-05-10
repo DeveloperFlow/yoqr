@@ -50,12 +50,39 @@
             <div id="instruction" class="center-text absolute top left center-text full-width minor-pad">
                 Place the qr code in the frame
             </div>
+            <div class="absolute full-width right-text left top minor-pad" id="cam-top">
+                <button class="close-button" id="close-scanner">x</button>
+            </div>
             <div id="reader"></div>
             <div id="camera-list" class="oneline scrollable-v absolute bottom left full-width">
-                
             </div>
         </div>
-        <div id="file-scanner" style="display:none" class="full-width full-height fixed left top"></div>
+        <div id="file-scanner" style="display:none"></div>
+        <div id="result-fixed" class="fixed full-width top left full-height flex vcenter hcenter" style="display:none">
+            <div class="curtain full-width full-height top left fixed"></div>
+            <div id="result-container">
+                <div class="minor-pad">
+                    <button id="close-result">x</button>
+                </div>
+                <div class="wrapper">
+                    <div id="rt-container" class="center-text">
+                        <img id="rt-img">
+                        <div class="space-up center-text" id="rt"></div>
+                    </div>
+                    <div id="rr-container">
+                        <div id="rr-top" class="flex vcenter apart full-width">
+                            <span>Raw Code</span>
+                            <img class="icon" src="img/copy.png" id="rr-copy">
+                        </div>
+                        <div id="rr"></div>
+                    </div>
+                    <div id="r-extra"></div>
+                </div>
+                <div id="ra-container">
+                    <button class="full-width" id="ra">Open</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="footer">
         <div class="main bit-curved">
