@@ -9,10 +9,11 @@ var typesManager
     var options = {
         colorLight: "#f00",
         colorDark: "#0ff",
-        width: 200,
-        height: 200
+        width: 250,
+        height: 250
     }
     
+    resizeEvt()
     qrTypeIni()
     colorPickerIni()
     logoIni()
@@ -30,8 +31,8 @@ var typesManager
       else{
           Qr.clear()
       }
-        Qr = new QRCode(resultBox,options)
-        downloadBtn.disabled = false
+      Qr = new QRCode(resultBox,options)
+      downloadBtn.disabled = false
     }
     function colorPickerIni(){
         var pickers = document.getElementsByClassName("colorpicker")
@@ -142,7 +143,7 @@ var typesManager
     }
     function downloadBtnIni(){
       downloadBtn.onclick = function(){
-          Qr.download("")
+          Qr.download("yoqr" + (Math.ceil(Math.random() * 100000)).toString())
       }
     }
     function qrTypeIni(){
@@ -171,6 +172,16 @@ var typesManager
                   forWifi(); break;
             }
         }
+    }
+    function resizeEvt(){
+        addEvent(window,"resize",handle)
+        function handle(){
+            var dim = elementDim(resultBox)
+            if(dim.w > 400){dim.w = 400}
+            options.width = dim.w - 20
+            options.height = options.width
+        }
+        handle()
     }
 })()
 
