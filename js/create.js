@@ -572,14 +572,15 @@ function forWifi(){
           scrollTo(ssidInputEl.getBoundingClientRect().top,0)
           return false
       }
-      var sc = ["\"",",",":",";","\\"]
+      var sc = ["\\","\"",",",":",";"]
       for(var i = 0; i < sc.length; i++){
         var c = sc[i]
         if(c == "\\"){
           c += "\\"
         }
         var regex = new RegExp(c,"g")
-        ssid = ssid.replace(regex,"\\" + sc[i])
+        var escapeChar = "\\"
+        ssid = ssid.replace(regex,escapeChar + sc[i])
       }
       return "WIFI:T:" + nwtInput.value + ";S:" + ssid + ";P:" + pw + ";H:" + h.checked.toString() + ";;"
   }
@@ -725,7 +726,6 @@ function forVcard(){
       vcard += "EMAIL:" + email + "\n"
       vcard += "URL:" + website + "\n"
       vcard += "END:VCARD"
-      console.log(vcard)
       return vcard
   }
 }
