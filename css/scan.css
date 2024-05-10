@@ -16,6 +16,9 @@
     color: #fff;
     flex-direction: column;
 }
+#cam-top{
+    z-index: 5;
+}
 #instruction{
     z-index: 4;
     background-color: rgba(0,0,0,0.5);
@@ -27,6 +30,7 @@
 #camera-list{
     padding: 3%;
     z-index: 4;
+    width: 100%;
 }
 #camera-list button{
     padding: 2%;
@@ -40,6 +44,82 @@
     color: #000;
 }
 
+#result-fixed .curtain{
+    background-color: rgba(50,50,50,0.5);
+    z-index: 2;
+}
+#result-container{
+    padding: 3%;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    width: 95%;
+    border-radius: 8px;
+    max-width: 700px;
+}
+#close-result,.close-button{
+    border: 1px solid #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+}
+#result-container .wrapper{
+    overflow: auto;
+    height: 80vh;
+    max-height: 400px;
+}
+#rt-container img{
+    width: 30vw;
+    max-width: 50px;
+    padding: 3%;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+#rr-container{
+    border: 1px solid #999;
+    border-radius: 8px 8px 0px 0px;
+}
+#rr-top{
+    border-bottom: 1px solid #999;
+    padding: 3%;
+}
+#r-extra{
+  margin-top: 3%;
+}
+#rr{
+    width: 100%;
+    border: none;
+    max-height: 200px;
+    padding: 3%;
+    background-color: #fff;
+    overflow: auto;
+    white-space: pre-wrap;
+    line-height: 150%;
+    font-size: 14px;
+}
+#ra-container{
+    width: 100%
+}
+#ra{
+    padding: 3%;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.field{
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0% 2% 0% 2%;
+  margin-top: 3%;
+}
+.field-input{
+    width:80%;
+}
+.field-input input{
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
 @media only screen and (min-width:700px){
     #main{display: flex; justify-content: center; align-items: center}
     #from-cam,#from-img{
