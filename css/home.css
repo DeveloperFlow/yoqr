@@ -55,6 +55,12 @@
     border-radius: 8px;
     filter: grayscale(100%);
 }
+#section-3 .list-item{
+    text-align: center;
+}
+#section-3 .list-item .icon{
+    width: 15%; max-width: none;
+}
 /*small screen styles*/
 @media only screen and (min-width:700px){
     #section-1{

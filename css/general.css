@@ -29,7 +29,7 @@ input:focus,textarea:focus,select:focus{
     outline: none;
 }
 .toggler{
-    padding: 4%;
+    padding: 2%;
 }
 .toggler .subject{
     display: none;

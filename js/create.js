@@ -21,7 +21,7 @@ var typesManager
     downloadBtnIni()
     
     function createCode(){
-      if(isEmpty(options.text),!options.text){
+      if(isEmpty(options.text) || !options.text){
           N = new notification("Please input the neccessary details","#f00")
           return
       }
