@@ -2,6 +2,7 @@
   background-color: #000;
   padding: 4%;
   color: #fff;
+  cursor: pointer;
 }
 #from-cam img,#from-img img{
     width: 40%;
@@ -10,6 +11,7 @@
 #from-img{
   background-color: #fff;
   padding: 4%;
+  cursor: pointer;
 }
 #cam-scanner{
     background-color: #000;
@@ -36,7 +38,7 @@
     padding: 2%;
     background-color: rgba(8,8,8,0.5);
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     margin-left: 3%;
 }
 #camera-list button.current{
@@ -58,7 +60,7 @@
     max-width: 700px;
 }
 #close-result,.close-button{
-    border: 1px solid #000;
+    border: 2px solid #000;
     width: 30px;
     height: 30px;
     border-radius: 25px;
@@ -71,16 +73,16 @@
 #rt-container img{
     width: 30vw;
     max-width: 50px;
-    padding: 3%;
-    border: 1px solid #000;
+    padding: 10px;
+    border: 2px solid #000;
     border-radius: 25px;
 }
 #rr-container{
-    border: 1px solid #999;
+    border: 2px solid #999;
     border-radius: 8px 8px 0px 0px;
 }
 #rr-top{
-    border-bottom: 1px solid #999;
+    border-bottom: 2px solid #999;
     padding: 3%;
 }
 #r-extra{
@@ -102,12 +104,12 @@
 }
 #ra{
     padding: 3%;
-    border: 1px solid #999;
+    border: 2px solid #999;
     border-radius: 4px;
 }
 
 .field{
-  border: 1px solid #999;
+  border: 2px solid #999;
   border-radius: 4px;
   padding: 0% 2% 0% 2%;
   margin-top: 3%;

@@ -1,4 +1,5 @@
-*{box-sizing: border-box; max-width: 100%}
+*{box-sizing: border-box; max-width: 100%; line-height: 150%}
+*:disabled{cursor: not-allowed}
 body{
     margin:0; 
     padding:0; 
@@ -10,7 +11,7 @@ a{
     text-decoration: none;
 }
 .input{
-    border: 1px solid #999;
+    border: 2px solid #999;
     border-radius: 4px;
 }
 .input div{
@@ -38,9 +39,18 @@ input:focus,textarea:focus,select:focus{
     display: block;
 }
 .toggle-ini{
-    border: 1px solid #000;
-    padding: 4%;
+    border: 2px solid #000;
+    padding: 0% 2%;
     border-radius: 4px;
+}
+.toggler .toggler-expand-icon{
+    font-size: 30px; cursor: pointer;
+}
+.spinner{
+    width: 20px; height: 20px; border-top: 2px solid #000; border-right: 2px solid #aaa;
+    border-radius: 50%; animation-name: spin; animation-duration: 1s;
+    animation-iteration-count: infinite; animation-timing-function: ease-in;
+    flex-shrink: 0;
 }
 /*general styles*/
 .theme-1-bg{
@@ -48,11 +58,12 @@ input:focus,textarea:focus,select:focus{
     color:#fff;
 }
 .button{border: 1px solid #fff;}
-
+.text{line-height: 200%}
 /*menu styles*/
 #menu{
     background-color: #fff;
-    border-bottom:1px solid #000;
+    border-bottom: 2px solid #000;
+    justify-content: space-around;
 }
 #menu-ini{
     display: none;
@@ -134,4 +145,12 @@ input:focus,textarea:focus,select:focus{
     #menu.open #menu-ini{
         display: none;
     }
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
 }

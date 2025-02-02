@@ -95,3 +95,31 @@ function isEmail(email){
     }
     return true
 }
+function spinner(container,bg,styles){
+    var el = document.createElement("div")
+    el.className = "spinner"
+    var wrapper = document.createElement("div")
+    wrapper.className = "absolute top left full-width flex vcenter hcenter spinner-wrapper"
+    wrapper.style.height = "100%"
+    var box = document.createElement("div")
+    box.className = "minor-pad curved"
+    box.appendChild(el)
+    if(bg){box.style.background = bg}
+    if(styles){
+        for(style in styles){
+            wrapper.style[style] = styles[style]
+        }
+    }
+    wrapper.appendChild(box)
+    var computedStyle = getComputedStyle(container)
+    var formalPos = container.style.position
+    if(!inarray(["absolute","fixed","relative"],computedStyle.position)){
+        container.style.position = "relative"
+    }
+    container.appendChild(wrapper)
+
+    return function(){
+        container.style.position = formalPos;
+        remove(wrapper)
+    }
+}

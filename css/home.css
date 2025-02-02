@@ -1,10 +1,8 @@
 #section-1 .part-1{
     padding: 4%;
-    background-image: linear-gradient(90deg,#999,#fff,#fff);
 }
 #section-1 .part-2{
     padding: 4%;
-    background-color: #fff;
 }
 #section-1 button{
     padding: 4%;
@@ -28,7 +26,7 @@
     filter: grayscale(100%);
     width: 80%;
     display: block;
-    margin: auto;
+    margin: auto
 }
 
 #section-3{margin-top: 4%;}
@@ -45,6 +43,7 @@
     align-items: flex-start;
     margin-top: 3%;
     padding: 3%;
+    border-radius: 25px;
 }
 #section-3 img.ill{
     width: 90%;
@@ -60,25 +59,59 @@
 @media only screen and (min-width:700px){
     #section-1{
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
     }
     #section-1 .part-1{
         width: 50%;
+        background-image: linear-gradient(90deg,#444,#fff,#444);
+        background: #000;
+        color: #fff
+    }
+    #section-1 .part-1 button{
+        background-color: #fff;
+    }
+    #section-1 .part-1 a{
+        color: #000
+    }
+    #section-1 h1{
+        font-size: 50px; line-height: normal;
     }
     #section-1 .part-2{
         border-left:1px solid #000;
         width: 50%;
+        background: #fff
     }
     #section-2{
         display: flex;
         align-items: center;
     }
+    #section-2 h2{font-size: 50px; margin: 0; line-height: normal;}
     #section-2 .part-1{
-        width: 40%;
+        width: 50%;
         border-radius: 8px;
     }
     #section-2 img{
         width: 40%;
-        border-radius: 8px;
+        border-radius: 0px 8px 8px 0px;
+        margin: 0px;
+        max-height: 400px;
+        object-fit: cover;
+    }
+    #section-3 h2{
+        font-size: 50px; line-height: normal; margin: 0
+    }
+    #section-3 .cap{
+        display: flex
+    }
+    #section-3 .list-item{
+        width: 33%; display: inline-block;
+    }
+    #section-3 .list-item .icon{
+        width: 25%; 
+        max-width: none;
+    }
+    #section-3 .list-item div{
+        margin-top: 3%;
+        font-size: 20px
     }
 }

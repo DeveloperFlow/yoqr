@@ -123,7 +123,7 @@
         real.oninput = startScan
         var ini = document.getElementById("from-img")
         ini.onclick = function(){real.click()}
-        var qrc
+        var qrc,stopScan
         function startScan(){
             var files = real.files
             if(!files || files.length < 1){
@@ -133,13 +133,19 @@
             if(!qrc){
                 qrc = new Html5Qrcode("file-scanner")
             }
+            stopScan = spinner(document.body,"#fff",{height: "100vh"})
             qrc.scanFile(imgFile).then(onsuccess,onfail)
         }
         function onsuccess(result,resultObj){
             showResult(result,resultObj)
+            finish()
         }
         function onfail(err){
             new notification("The image you provided could not be decoded","#ffb630")
+            finish()
+        }
+        function finish(){
+            stopScan()
         }
     }
     function showResult(result){
