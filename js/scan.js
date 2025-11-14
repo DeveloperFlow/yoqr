@@ -1,4 +1,11 @@
 (function(){
+    changeClass(document.body, "not-loaded", "loaded")
+    setTimeout(
+        function(){
+            changeClass(document.body, "", "scan-with-img-ready")
+        },
+        200
+    )
     fromCamIni()
     fromImgIni()
     var resultInterface
@@ -29,7 +36,12 @@
             qrc.start(cameras[0].id,config,onsuccess).catch(failedCameraGet);
         }
         function closeScanner(){
-            qrc.stop().then(close).catch(error)
+            try{
+                qrc.stop().then(close).catch(error)
+            }
+            catch(err){
+                close()
+            }
             function close(){
                 cameras = []
                 while(camList.children.length > 0){
@@ -109,7 +121,8 @@
             showResult(decodedText,decodedResult)
         };
         function failedCameraGet(err){
-            var m = "Unable to access device camera " + err
+            var m = "Unable to access device camera"
+            console.log(err)
             if(err.name == "NotAllowedError"){
                 m = "Access to device camera is denied"
             }

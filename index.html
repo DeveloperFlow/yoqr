@@ -12,9 +12,10 @@
     <script defer src="qrcg/qrcode.js"></script>
     <script defer src="lib/js/basics.js"></script>
     <script defer src="js/general.js"></script>
+    <script defer src="js/home.js"></script>
     <title>Generate and Scan Qr Codes</title>
 </head>
-<body class="my-fonts">
+<body class="my-fonts not-loaded">
     <div id="menu" class="flex vcenter apart">
         <h1 class="logo">QR</h1>
         <button id="menu-ini">&#8801;</button>
@@ -29,82 +30,149 @@
             <a href="faq.html">Faq</a>
         </div>
     </div>
-    <div id="section-1">
-        <div class="part-1 center-text">
-            <h1 class="center-text">
-                Create Qr Codes
-            </h1>
-            <div class="center-text">
-                <p>
-                    Generate QR codes for various purposes such as URLs, contact information, WiFi access, and more. 
-                    Simply click the button below to start creating your own QR codes.
-                </p>
-            </div>
-            <button class="space-up theme-1-bg bit-curved no-border minor-pad">
-                <a href="create.html" class="white">
-                    Create Qr Code
-                </a>
-            </button>
+    <div id="section-1" class="relative">
+        <div class="absolute top left full-width center-text full-height" id="connector-container">
+            <button id="connector" class="curved">Do You Wish To</button>
+            <button id="or-connector" class="round block">OR</button>
         </div>
-        <div class="part-2 center-text">
-            <h1>
-                Scan QR Codes
-            </h1>
-            <div>
-                <p>
-                    Use our QR code scanner to quickly and easily scan any QR code. Click the button below to start scanning.
-                </p>
+        <div class="part-1 center-text flex vcenter hcenter">
+            <div class="relative">
+                <h1 class="center-text">
+                    Create Qr Codes
+                </h1>
+                <div class="center-text">
+                    <p>
+                        Generate QR codes for various purposes such as URLs, contact information, WiFi access, and more. 
+                        Simply click the button below to start creating your own QR codes.
+                    </p>
+                </div>
+                <button class="space-up theme-2-bg curved no-border minor-pad cta">
+                    <a href="create.html" class="white">
+                        Create Qr Code
+                    </a>
+                </button>
             </div>
-            <button class="space-up theme-1-bg bit-curved no-border minor-pad">
-                <a href="scan.html" class="white">
-                    Scan Qr Code
-                </a>
-            </button>
+            <div class="bg-img"><img src="img/3dgraphics-1762294579840.png" class="anime-delay"></div>
+        </div>
+        <div class="part-2 center-text flex vcenter hcenter">
+            <div class="relative anime-delay">
+                <h1>
+                    Scan QR Codes
+                </h1>
+                <div>
+                    <p>
+                        Use our QR code scanner to quickly and easily scan any QR code. Click the button below to start scanning.
+                    </p>
+                </div>
+                <button class="space-up theme-1-bg curved no-border minor-pad cta">
+                    <a href="scan.html" class="white">
+                        Scan Qr Code
+                    </a>
+                </button>
+            </div>
+            <div class="bg-img">
+                <img src="img/3dgraphics-1762295590640.png" class="anime-delay">
+            </div>
         </div>
     </div>
     <div id="section-2">
-        <img src="img/qr.jpeg">
+        <div class="part-0 relative flex vcenter scroll-n-view from-down">
+            <div class="text-content">
+                <div style="border-bottom: 2px solid #ffb630">What We Do</div>
+                <h1>What Can I <span class="theme-2-bg">Use YoQR For?</span></h1>
+                <div style="margin-top: 1rem">
+                    <button class="minor-pad theme-2-bg curved no-border">
+                        <a href="create.html" class="normal">Start Creating QR Codes</a>
+                    </button>
+                </div>
+            </div>
+            <img src="img/3dgraphics-1762299772427.png">
+        </div>
         <div class="part-1">
-            <h2 class="center-text">
-                What Is A Qr Code For?
-            </h2>
-            <div class="text center-text">
-                Qr code stands for quick response code, and it is a technology with a wide range of use cases,
-                 such as storing URLs, contact information, or even payment information. 
-                Basically Qr codes help you represent any piece of information be it a website url, vcard, or even a phone number as a code that can be scanned 
-                by a computer and then that piece of information will be transfered to that computer.
+            <div class="card flex">
+                <div class="num theme-2-bg flex vcenter hcenter">01</div>
+                <div class="description">
+                    <h1>Create QR Codes For Your Website</h1>
+                    <div>
+                        With a Qr code you can share links to any website and once a person scans your qr code, they will be taken to that website,
+                        YoQR helps you create such codes
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="card flex">
+                <div class="num theme-2-bg flex vcenter hcenter">02</div>
+                <div class="description">
+                    <h1>Share Your Contact Information</h1>
+                    <div>
+                        With a Qr code you can share links to any website and once a person scans your qr code, they will be taken to that website,
+                        YoQR helps you create such codes
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card flex">
+                <div class="num theme-2-bg flex vcenter hcenter">03</div>
+                <div class="description">
+                    <h1>Share Your App</h1>
+                    <div>
+                        Make it easier for your users to download your app, by creating a qr code for your app you provide users with a means to 
+                        easily download your app by simply scanning your code.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div style="height: 10vh"></div>
     <div id="section-3">
-        <div class="part-1 space-up white-bg">
-            <h2 class="center-text">
-                What You Can Do With A Qr Code
-            </h2>
-            <div class="cap">
-                <div class="list-item">
-                    <img class="icon" src="img/web.png">
-                    <div>
-                        With a Qr code you    can share links to any website and once a person scans your qr code, they will be taken to that website
-                    </div>
-                </div>
-                <div class="list-item">
-                    <img class="icon" src="img/whatsapp.png">
-                    <div>
-                        You can create a qr code for your whatsapp account, so that when a lerson scans this code they will be directed to your whatsapp DM
-                    </div>
-                </div>
-                <div class="list-item">
-                    <img class="icon" src="img/vcard.png">
-                    <div>
-                        You can also create a Qr code for sharing your vcard, so that once this code is scanned the scanner will have your virtual card file
-                    </div>
-                </div>
+        <h1 class="center-text scroll-n-view">
+            Some Of <span> The QR Codes</span> You Can Create
+        </h1>
+        <div class="short-list none">
+            <div class="item">
+                <img src="img/whatsapp.png">
+                <span>Whatsapp</span>
             </div>
-            <div class="center-text">
-                <a class="minor-pad bit-curved full-width" 
-                style="margin-top: 3%; background-color:transparent; display:inline-block; 
-                box-shadow: inset 2px 2px 10px" href="create.html">Create Qr Code</a>
+            <div class="item">
+                <img src="img/wifi.png">
+                <span>Wifi</span>
+            </div>
+            <div class="item">
+                <img src="img/web.png">
+                <span>Website</span>
+            </div>
+            <div class="item">
+                <img src="img/vcard.png">
+                <span>Contact Info</span>
+            </div>
+            <div class="item">
+                <img src="img/text.png">
+                <span>Plain Text</span>
+            </div>
+            <div class="item">
+                <img src="img/sms.png">
+                <span>Sms</span>
+            </div>
+            <div class="item">
+                <img src="img/phone.png">
+                <span>Phone</span>
+            </div>
+            <div class="item">
+                <img src="img/email.png">
+                <span>Email</span>
+            </div>
+            <div class="item">
+                <img src="img/app.png">
+                <span>App</span>
+            </div>
+        </div>
+    </div>
+    <div id="section-4" class="flex vcenter hcenter relative">
+        <div class="name">
+            <span>YOQR</span>
+            <div class="absolute top left flex vcenter hcenter full-width full-height">
+                <div class="glow-circle"></div>
             </div>
         </div>
     </div>
@@ -112,21 +180,40 @@
         <div class="main bit-curved">
             <div class="links">
                 <h3>Links</h3>
-                <a href="create.html">
-                    Create Qr Code
-                </a>
-                <a href="scan.html">
-                    Scan Qr Code
-                </a>
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="faq.html">
-                    FAQ
-                </a>
-                <a href="report.html">
-                    Report an Error
-                </a>
+                <div class="link">
+                    <a href="create.html">
+                        Create Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="scan.html">
+                        Scan Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="space-up">
+                    &copy; <span class="year-temp"></span>
+                </div>
+            </div>
+            <div class="id">
+                <div class="name">YOQR</div>
+                <div class="socials">
+                    <button>
+                        <img class="icon" src="img/ig.png">
+                    </button>
+                    <button>
+                        <img class="icon" src="img/fb.png">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

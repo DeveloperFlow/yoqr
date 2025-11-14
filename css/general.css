@@ -1,18 +1,26 @@
 *{box-sizing: border-box; max-width: 100%; line-height: 150%}
 *:disabled{cursor: not-allowed}
+body.not-loaded{
+    display: none
+}
+button:hover, .flip-effect:hover{
+    animation-name: flip;
+    animation-duration: 1s;
+    cursor: pointer;
+}
 body{
     margin:0; 
     padding:0; 
     border:none;
-    background-image: linear-gradient(90deg,#fff,#ddd);
+    background: #000;
 }
 a{
     color: #444;
     text-decoration: none;
 }
 .input{
-    border: 2px solid #999;
-    border-radius: 4px;
+    border: 2px solid #444;
+    border-radius: 8px;
 }
 .input div{
     padding-left: 3%;
@@ -29,7 +37,7 @@ input:focus,textarea:focus,select:focus{
     outline: none;
 }
 .toggler{
-    padding: 2%;
+    padding: 1rem;
 }
 .toggler .subject{
     display: none;
@@ -39,9 +47,9 @@ input:focus,textarea:focus,select:focus{
     display: block;
 }
 .toggle-ini{
-    border: 2px solid #000;
-    padding: 0% 2%;
-    border-radius: 4px;
+    border: 2px solid #444;
+    padding: 1rem;
+    border-radius: 8px;
 }
 .toggler .toggler-expand-icon{
     font-size: 30px; cursor: pointer;
@@ -57,13 +65,22 @@ input:focus,textarea:focus,select:focus{
     background-color: #000; 
     color:#fff;
 }
+.theme-2-bg{
+    background-color: #ffb630;
+    color: #000;
+}
 .button{border: 1px solid #fff;}
 .text{line-height: 200%}
+.visible.from-down{
+    animation-name: from-down;
+    animation-duration: 1s;
+}
 /*menu styles*/
 #menu{
-    background-color: #fff;
-    border-bottom: 2px solid #000;
+    background-color: #000;
+    border-bottom: 2px solid #444;
     justify-content: space-around;
+    color: #fff
 }
 #menu-ini{
     display: none;
@@ -79,6 +96,7 @@ input:focus,textarea:focus,select:focus{
 #menu .links{width: 50%;}
 #menu .links a{
     display: block;
+    color: #fff
 }
 #ss-close-container{
   display: none;
@@ -89,30 +107,48 @@ input:focus,textarea:focus,select:focus{
 }
 #footer .main{
     background-color: #000;
-    padding: 3%;
+    padding: 2rem;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #444
 }
+#footer .link{
+    margin-top: 2rem;
+}
+#footer .links .space-up{margin-top: 3rem}
 #footer a{
     color: #fff; 
-    display: block;
     margin-top: 4%;
     font-size: 14px;
+}
+#footer .id{
+    padding-right: 1rem
+}
+#footer .id .name{
+    font-size: 6rem;
+    background-image: linear-gradient(90deg, #ffb630, #75c2af, #75c);
+    background-clip: text;
+    color: transparent
+}
+#footer .id .socials{
+    display: flex; justify-content: center; align-items: center; gap: 1rem
+}
+#footer .id .socials button{
+    width: 40px; height: 40px; border-radius: 25px; background-color: #fff; border: none; display: flex; justify-content: center;
+    align-items: center;
 }
 
 /*small screen styles*/
 @media only screen and (max-width:800px){
     #menu-ini{display:block; display: inline-block}
-    #menu .links{display: none;}
+    #menu .links{
+        transition: .7s; width: auto; height: 100%; top: 0; right: -1000px; overflow: auto; padding: 1rem; display: block; position: fixed;
+        z-index: 3; background-color: #000; color: #fff;
+    }
     #menu.open .links{
-        display: block;
-        position: fixed;
-        top: 0;
         right: 0;
-        height: 100%;
-        width: auto;
-        background-color: #fff;
-        z-index: 3;
-        overflow: auto;
     }
     #menu.open #ss-curtain{
         display: block;
@@ -125,25 +161,31 @@ input:focus,textarea:focus,select:focus{
         opacity: 0.7;
         background-image: linear-gradient(90deg,#000,#fff);
     }
-    #menu.open .links a{
+    #menu/*.open*/ .links a{
         font-size: 25px;
-        margin-top: 10%;
-        border-bottom: 1px solid #000;
+        margin-top: 1rem;
+        padding: 1rem;
+        color: #fff;
     }
-    #menu.open #ss-close-container{
+    #menu/*.open*/ #ss-close-container{
         display: flex;
         justify-content: center;
         padding: 3%;
     }
     #ss-close{
         background-color: transparent;
-        border: 1px solid #000;
-        padding: 4%;
-        border-radius: 4px;
+        border: 1px solid #444;
+        padding: 1rem;
+        border-radius: 25px;
         width: 50%;
+        color: #fff
     }
     #menu.open #menu-ini{
         display: none;
+    }
+
+    #footer .id .name{
+        font-size: 3rem;
     }
 }
 @keyframes spin{
@@ -153,4 +195,56 @@ input:focus,textarea:focus,select:focus{
   100%{
     transform: rotate(360deg)
   }
+}
+@keyframes flip{
+    0%{
+        transform: rotateX(180deg)
+    }
+    100%{
+        transform: rotateX(0deg)
+    }
+}
+@keyframes from-up{
+    0%{
+        opacity: .4;
+        transform: translateY(5rem)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0rem)
+    }
+}
+@keyframes from-down{
+    0%{
+        opacity: .4;
+        transform: translateY(-5rem)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0rem)
+    }
+}
+@keyframes zoom-in{
+    0%{
+        transform: scale(.5);
+        opacity: .2
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes glow{
+    0%{
+        transform: scale(.5);
+        filter: blur(20px)
+    }
+    50%{
+        transform: scale(1.3);
+        filter: blur(3px)
+    }
+    100%{
+        transform: scale(.5);
+        filter: blur(20px)
+    }
 }

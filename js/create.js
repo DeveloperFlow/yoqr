@@ -13,8 +13,11 @@ var typesManager
         height: 250
     }
     
-    resizeEvt()
+
     qrTypeIni()
+    changeClass(document.body, "not-loaded", "")
+    scrollNShow()
+    resizeEvt()
     colorPickerIni()
     logoIni()
     createBtnIni()
@@ -171,6 +174,8 @@ var typesManager
                 case("wifi-type"):
                   forWifi(); break;
             }
+            qrType.setAttribute("data-playtime", i * 200)
+            changeClass(qrType, "", ["scroll-n-view", "timeline-based"])
         }
     }
     function resizeEvt(){

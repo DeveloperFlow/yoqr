@@ -1,3 +1,13 @@
+body.loaded #from-cam{
+    animation-name: flip-right;
+    animation-duration: 1s;
+}
+body.scan-with-img-ready #from-img{
+    visibility: visible;
+    animation-name: flip-left;
+    animation-duration: 1s;
+}
+
 #from-cam{
   background-color: #000;
   padding: 4%;
@@ -12,6 +22,7 @@
   background-color: #fff;
   padding: 4%;
   cursor: pointer;
+  visibility: hidden;
 }
 #cam-scanner{
     background-color: #000;
@@ -130,5 +141,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@keyframes flip-right{
+    0%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(0deg)
+    }
+}
+
+@keyframes flip-left{
+    0%{
+        transform: rotateY(-180deg);
+    }
+    100%{
+        transform: rotateY(0deg);
     }
 }

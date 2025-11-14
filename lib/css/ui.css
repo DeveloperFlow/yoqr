@@ -63,4 +63,4 @@ position:absolute; z-index: 2;}
 .yotta-notification .yotta-notification-top{text-align: right; padding:3% 3% 0% 0%}
 .yotta-notification .yotta-notification-top .yotta-notification-close{color:#fff; font-weight: bold; font-size:14px;
 cursor:pointer}
-.yotta-notification .yotta-notification-message{color:#fff; padding:3%; font-size: 15px; padding-top: 0%;}
+.yotta-notification .yotta-notification-message{color:#fff; padding: 1rem; font-size: 15px; padding-top: 0%;}

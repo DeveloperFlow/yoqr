@@ -21,8 +21,18 @@
   #faq .subject{
       line-height: 25px;
   }
+  #faq .faq{
+    cursor: pointer
+  }
+  #faq .faq.visible{
+    animation-name: from-down;
+    animation-duration: .5s;
+  }
+  *{
+    color: #fff
+  }
 </style>
-<body class="my-fonts">
+<body class="my-fonts not-loaded ini-anime">
     <div id="menu" class="flex vcenter apart">
         <h1 class="logo">QR</h1>
         <button id="menu-ini">&#8801;</button>
@@ -38,11 +48,11 @@
         </div>
     </div>
     <div id="main">
-        <h2 class="center-text minor-pad" style="margin: 0">
+        <h1 class="center-text minor-pad">
             Frequently Asked Questions
-        </h2>
+        </h1>
         <div id="faq" style="padding: 0">
-            <div class="toggler faq">
+            <div class="toggler faq scroll-n-view">
                 <div class="flex apart vcenter toggle-ini">
                     <span>Is creating a qr code free</span>
                     <span class="toggler-expand-icon">+</span>
@@ -51,7 +61,7 @@
                     Yes, creating a qr code with our qr code creator is completely free
                 </div>
             </div>
-            <div class="toggler faq">
+            <div class="toggler faq scroll-n-view">
                 <div class="flex apart vcenter toggle-ini">
                     <span>Is there a limit to the number of qr codes I can create</span>
                     <span class="toggler-expand-icon">+</span>
@@ -60,13 +70,13 @@
                     No, there is no limit so you can create as many qr codes as you wish
                 </div>
             </div>
-            <div class="toggler faq">
+            <div class="toggler faq scroll-n-view">
                 <div class="flex apart vcenter toggle-ini">
                     <span>Why are there different types of qr codes to choose from</span>
                     <span class="toggler-expand-icon">+</span>
                 </div>
                 <div class="subject">
-                    The different types of qr codes are there because very often people require different qr codes for different use cases, for example when you create a qr code for a website, scanning the code opens up the website, whike if you create a qr code for a phone number scanning the code calls that number
+                    The different types of qr codes are there because very often people require different qr codes for different use cases, for example when you create a qr code for a website, scanning the code opens up the website, mean while if you create a qr code for a phone number scanning the code calls that number
                 </div>
             </div>
         </div>
@@ -75,21 +85,40 @@
         <div class="main bit-curved">
             <div class="links">
                 <h3>Links</h3>
-                <a href="create.html">
-                    Create Qr Code
-                </a>
-                <a href="scan.html">
-                    Scan Qr Code
-                </a>
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="faq.html">
-                    FAQ
-                </a>
-                <a href="report.html">
-                    Report an Error
-                </a>
+                <div class="link">
+                    <a href="create.html">
+                        Create Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="scan.html">
+                        Scan Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="space-up">
+                    &copy; <span class="year-temp"></span>
+                </div>
+            </div>
+            <div class="id">
+                <div class="name">YOQR</div>
+                <div class="socials">
+                    <button>
+                        <img class="icon" src="img/ig.png">
+                    </button>
+                    <button>
+                        <img class="icon" src="img/fb.png">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

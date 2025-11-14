@@ -1,80 +1,239 @@
+body.not-loaded{
+    display: none
+}
+body{
+    background: #000
+}
+
+#menu{background-color: #000; color: #fff; z-index: 2; width: 100%}
+#menu *{color: #fff}
+.bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+/*for hero anime*/
+.anime-delay{
+    visibility: hidden;
+}
+#section-1 .part-1 >div:nth-child(1).animate{
+    animation-name: from-up;
+    animation-duration: 1s;
+}
+#section-1 .part-2 >div:nth-child(1).animate{
+    animation-name: from-down;
+    animation-duration: 1s;
+}
+#section-1 img.animate{
+    animation-name: zoom-in;
+    animation-duration: .5s
+}
+/*section 3 anime*/
+#section-3 h1.visible{
+    animation-name: from-up;
+    animation-duration: 1s
+}
+#section-3 .short-list .item.visible{
+    animation-name: zoom-in;
+    animation-duration: 1s
+}
+
+
+#connector-container{
+    display: none; z-index: 2; padding: 8rem;
+}
+#section-1 .relative{z-index: 2;}
 #section-1 .part-1{
     padding: 4%;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    min-height: 50%
 }
+#section-1 .part-1 img{
+    height: auto;
+    left: -150px;
+    bottom: -200px;
+    position: absolute;
+    right: unset;
+    top: unset
+}
+#section-1 .part-1 p{background-color: #000;}
+#section-1 h1{margin-top: 0}
+#section-1 img{width: 400px}
 #section-1 .part-2{
     padding: 4%;
+    background: #ffb630;
+    position: absolute;
+    min-height: 50%;
+    top: 50%
+}
+#section-1 .part-2 img{
+    height: auto;
+    right: -140px;
+    bottom: -200px;
+    position: absolute;
 }
 #section-1 button{
-    padding: 4%;
+    padding: 1rem;
     margin-top: 4%;
+}
+#section-1 .cta{
+    position: relative;
+    z-index: 2;
 }
 
 #section-2{
     margin-top: 4%;
 }
-#section-2 .part-1{
-    padding: 4%;
-    width: 80%;
-    margin: auto;
-    background-color: #000;
-    color: #fff;
-    border-radius:0px 0px 8px 8px;
-    max-width: 1000px;
-    font-size: 14px;
+#section-2 .part-0{
+    padding: 2rem 0rem 2rem 2rem;  position: sticky; top: 0; 
 }
-#section-2 img{
-    filter: grayscale(100%);
-    width: 80%;
-    display: block;
-    margin: auto
+#section-2 .part-0 .text-content{
+    width: 70%; color: #fff
 }
-
-#section-3{margin-top: 4%;}
-#section-3 .part-1{
-    padding: 4%;
-    width: 80%;
-    margin: auto;
-    margin-top: 3%;
-    border-radius: 8px;
-    max-width: 1000px;
-    font-size: 14px;
+#section-2 .part-0 img{
+    width: 30%
 }
-#section-3 .list-item{
+#section-2 .part-0 h1{max-width: 500px; margin-top: 1rem; margin-bottom: 0; font-size: 2.5rem; color: #fff}
+#section-2 .part-0 button{padding: 1rem}
+#section-2 .part-0 a{color: #000}
+#section-2 .part-1{padding: 1rem}
+#section-2 .part-1 .card{
+    display: flex;
     align-items: flex-start;
-    margin-top: 3%;
-    padding: 3%;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
     border-radius: 25px;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 2px 2px #111;
+    position: sticky;
 }
-#section-3 img.ill{
-    width: 90%;
-    max-width: 200px;
-    height: auto;
-    display: block;
+#section-2 .part-1 .card:hover .num, button:hover{
+    animation-name: flip;
+    animation-duration: 1s
+}
+#section-2 .part-1 .card .num{width: 40px; height: 40px; border-radius: 25px; color: #000; flex-shrink: 0;}
+#section-2 .part-1 .card h1{margin-top: 0}
+#section-2 .part-1 .card .description{padding: 1rem}
+
+#section-3{
+    background-color: #000;
+    min-height: auto !important;
+    padding-bottom: 2rem;
+}
+#section-3 h1{
+    font-size: 2rem;
+    padding: 2rem;
+    max-width: 800px;
     margin: auto;
-    margin-bottom: 3%;
-    border-radius: 8px;
-    filter: grayscale(100%);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #fff
 }
-#section-3 .list-item{
-    text-align: center;
+#section-3 h1 span{
+    background: #ffb630
 }
-#section-3 .list-item .icon{
-    width: 15%; max-width: none;
+#section-3 .short-list{
+    padding: 1rem;
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#section-3 .short-list .item{
+    width: 49%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 1px #000;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 3rem
+}
+#section-3 .short-list :nth-child(9){
+    display: none;
+}
+#section-3 .short-list .item img{
+    width: 30px;
+}
+#section-4{
+    padding: 1rem;
+    background: #000
+}
+#section-4 .name{
+    font-size: 5rem;
+    background-image: linear-gradient(45deg, #ffb630, #75c2af, #75c);
+    background-clip: text;
+    color: transparent;
+}
+#section-4 .name span{z-index: 1;}
+#section-4 .absolute{
+    overflow: hidden
+}
+#section-4 .glow-circle{
+    width: 500px;
+    height: 500px;
+    border: 10px solid #ffb630;
+    border-radius: 50%;
+    max-width: none;
+    filter: blur(20px);
+    flex-shrink: 0;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 /*small screen styles*/
+@media only screen and (min-width: 365px){
+    #section-2 .part-0 h1{font-size: 3rem}
+}
+@media only screen and (max-height: 600px){
+    #section-1 .part-1, #section-1 .part-2{
+        position: relative
+    }
+}
 @media only screen and (min-width:700px){
+    #menu{
+        width: 100%; color: #fff !important; z-index: 2;
+        border-bottom: none;
+    }
     #section-1{
         display: flex;
         align-items: stretch;
     }
+    #connector-container{
+        display: block
+    }
+    #section-1 button#connector{
+        border: 1px solid #fff;
+        margin-top: 0;
+        background-color: transparent;
+        color: #fff;
+        backdrop-filter: blur(5px);
+    }
+    #section-1 button#or-connector{
+        position: absolute;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        left: calc(50% - 20px);
+        top: calc(50% - 20px)
+    }
+    #section-1 img{width: 500px}
     #section-1 .part-1{
         width: 50%;
-        background-image: linear-gradient(90deg,#444,#fff,#444);
         background: #000;
-        color: #fff
-    }
-    #section-1 .part-1 button{
-        background-color: #fff;
+        color: #fff;
+        position: relative;
+        height: auto
     }
     #section-1 .part-1 a{
         color: #000
@@ -83,41 +242,41 @@
         font-size: 50px; line-height: normal;
     }
     #section-1 .part-2{
-        border-left:1px solid #000;
         width: 50%;
-        background: #fff
+        background: #ffb630;
+        position: relative;
+        top: 0;
+        height: auto
     }
-    #section-2{
-        display: flex;
-        align-items: center;
+    #section-1 .part-2 img{
+        right: -100px;
     }
-    #section-2 h2{font-size: 50px; margin: 0; line-height: normal;}
-    #section-2 .part-1{
-        width: 50%;
-        border-radius: 8px;
+    #section-3 h1{
+        font-size: 3rem;
     }
-    #section-2 img{
-        width: 40%;
-        border-radius: 0px 8px 8px 0px;
-        margin: 0px;
-        max-height: 400px;
-        object-fit: cover;
+    #section-3 .short-list{
+        gap: 1%;
     }
-    #section-3 h2{
-        font-size: 50px; line-height: normal; margin: 0
+    #section-3 .short-list .item{
+        width: 32%;
     }
-    #section-3 .cap{
+    #section-3 .short-list :nth-child(9){
         display: flex
     }
-    #section-3 .list-item{
-        width: 33%; display: inline-block;
+
+    #section-4 .name{font-size: 10rem}
+}
+@media only screen and (min-width: 850px){
+    #section-2{
+        display: flex;
+        align-items: flex-start;
+        min-height: 100vh
     }
-    #section-3 .list-item .icon{
-        width: 25%; 
-        max-width: none;
-    }
-    #section-3 .list-item div{
-        margin-top: 3%;
-        font-size: 20px
+    #section-2 .part-0{width: 55%; align-items: center}
+    #section-2 .part-0 h1{font-size: 4rem; line-height: 3.5rem;}
+    #section-2 h2{font-size: 50px; margin: 0; line-height: normal;}
+    #section-2 .part-1{
+        width: 45%;
+        border-radius: 8px;
     }
 }

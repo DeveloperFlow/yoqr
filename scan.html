@@ -17,7 +17,7 @@
     <script defer src="js/scan.js"></script>
     <title>Scan Qr Codes</title>
 </head>
-<body class="my-fonts">
+<body class="my-fonts not-loaded">
     <div id="menu" class="flex vcenter apart">
         <h1 class="logo">QR</h1>
         <button id="menu-ini">&#8801;</button>
@@ -51,7 +51,7 @@
                 Place the qr code in the frame
             </div>
             <div class="absolute full-width right-text left top minor-pad" id="cam-top">
-                <button class="close-button" id="close-scanner">x</button>
+                <button class="close-button" id="close-scanner">&#10006;</button>
             </div>
             <div id="reader"></div>
             <div id="camera-list" class="oneline scrollable-v absolute bottom left full-width">
@@ -88,21 +88,40 @@
         <div class="main bit-curved">
             <div class="links">
                 <h3>Links</h3>
-                <a href="create.html">
-                    Create Qr Code
-                </a>
-                <a href="scan.html">
-                    Scan Qr Code
-                </a>
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="faq.html">
-                    FAQ
-                </a>
-                <a href="report.html">
-                    Report an Error
-                </a>
+                <div class="link">
+                    <a href="create.html">
+                        Create Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="scan.html">
+                        Scan Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="space-up">
+                    &copy; <span class="year-temp"></span>
+                </div>
+            </div>
+            <div class="id">
+                <div class="name">YOQR</div>
+                <div class="socials">
+                    <button>
+                        <img class="icon" src="img/ig.png">
+                    </button>
+                    <button>
+                        <img class="icon" src="img/fb.png">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

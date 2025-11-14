@@ -1,6 +1,11 @@
 (function(){
     iniTogglers()
     iniMenuToggler()
+    iniSetYear()
+    if(hasClass(document.body, "ini-anime")){
+        changeClass(document.body, "not-loaded", "")
+        scrollNShow()
+    }
     
     function iniTogglers(){
         var togglers = document.getElementsByClassName("toggler")
@@ -33,6 +38,14 @@
             changeClass(menuEl,"open","")
         }
         ssCurtain.onclick = closer.onclick
+    }
+    function iniSetYear(){
+        var years = document.getElementsByClassName("year-temp")
+        var year = new Date()
+        year = year.getFullYear()
+        for(var i = 0; i < years.length; i++){
+            years[i].innerHTML = year
+        }
     }
 })()
 function isWebUrl(url){

@@ -17,7 +17,7 @@
     <script defer src="js/create.js"></script>
     <title>Create Qr Codes</title>
 </head>
-<body class="my-fonts">
+<body class="my-fonts not-loaded">
   <div id="menu" class="flex vcenter apart">
       <h1 class="logo">QR</h1>
       <button id="menu-ini">&#8801;</button>
@@ -92,7 +92,7 @@
             <div id="qr-params">
                 <div id="fields">
                     <div id="for-url" class="current-type">
-                      <h2>Website</h2>
+                      <h2 class="scroll-n-view from-down">Website</h2>
                       <div class="input">
                         <div>
                           <span class="small-text">Url</span>
@@ -189,9 +189,9 @@
                         <span class="toggler-expand-icon">+</span>
                     </div>
                     <div class="subject">
-                        <div>
+                        <div style="margin-top: 1rem;">
                           <div class="big-text">Logo</div>
-                          <div class="minor-pad small-text">
+                          <div class="minor-pad" style="margin-top: 1rem">
                             <div>
                                <input type="file" style="display:none" id="real-logo-picker" accept="image/*">
                                <button id="logo-picker" class="black-bg white">Upload Logo</button>
@@ -223,21 +223,40 @@
         <div class="main bit-curved">
             <div class="links">
                 <h3>Links</h3>
-                <a href="create.html">
-                    Create Qr Code
-                </a>
-                <a href="scan.html">
-                    Scan Qr Code
-                </a>
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="faq.html">
-                    FAQ
-                </a>
-                <a href="report.html">
-                    Report an Error
-                </a>
+                <div class="link">
+                    <a href="create.html">
+                        Create Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="scan.html">
+                        Scan Qr Code
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="space-up">
+                    &copy; <span class="year-temp"></span>
+                </div>
+            </div>
+            <div class="id">
+                <div class="name">YOQR</div>
+                <div class="socials">
+                    <button>
+                        <img class="icon" src="img/ig.png">
+                    </button>
+                    <button>
+                        <img class="icon" src="img/fb.png">
+                    </button>
+                </div>
             </div>
         </div>
     </div>
