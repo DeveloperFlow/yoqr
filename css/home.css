@@ -78,6 +78,7 @@ body{
     bottom: -200px;
     position: absolute;
 }
+#section-1 .part-2 p{background: #ffb630}
 #section-1 button{
     padding: 1rem;
     margin-top: 4%;
