@@ -130,6 +130,7 @@ input:focus,textarea:focus,select:focus{
     font-size: 6rem;
     background-image: linear-gradient(90deg, #ffb630, #75c2af, #75c);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent
 }
 #footer .id .socials{
@@ -216,7 +217,7 @@ input:focus,textarea:focus,select:focus{
 }
 @keyframes from-down{
     0%{
-        opacity: .4;
+        opacity: .1;
         transform: translateY(-5rem)
     }
     100%{
