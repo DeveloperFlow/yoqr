@@ -129,8 +129,8 @@ input:focus,textarea:focus,select:focus{
 #footer .id .name{
     font-size: 6rem;
     background-image: linear-gradient(90deg, #ffb630, #75c2af, #75c);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent
 }
 #footer .id .socials{

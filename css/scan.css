@@ -7,7 +7,7 @@ body.scan-with-img-ready #from-img{
     animation-name: flip-left;
     animation-duration: 1s;
 }
-
+*{color: #fff}
 #from-cam{
   background-color: #000;
   padding: 4%;
