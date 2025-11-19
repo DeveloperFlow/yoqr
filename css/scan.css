@@ -70,6 +70,9 @@ body.scan-with-img-ready #from-img{
     border-radius: 8px;
     max-width: 700px;
 }
+#result-container *{
+    color: #000;
+}
 #close-result,.close-button{
     border: 2px solid #000;
     width: 30px;
